@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url shortener Project</title>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Background (Deep Dark) */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d1117;
+}
+
+/* Container (Terminal Style) */
+.container {
+    width: 600px;
+    padding: 50px;
+    border-radius: 15px;
+    background: #161b22;
+    box-shadow: 0 0 25px rgba(0, 255, 100, 0.2);
+    border: 1px solid rgba(0,255,100,0.2);
+    text-align: center;
+}
+
+/* Heading */
+.container h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #00ff9c;
+    letter-spacing: 1px;
+}
+
+/* Label */
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #8b949e;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    background: #0d1117;
+    color: #00ff9c;
+    font-size: 15px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* Input focus */
+input:focus {
+    border-color: #00ff9c;
+    box-shadow: 0 0 8px rgba(0,255,156,0.5);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #00ff9c;
+    color: #0d1117;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+button:hover {
+    background: #00cc7a;
+    box-shadow: 0 0 10px #00ff9c;
+}
+
+/* Result Text */
+p {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #c9d1d9;
+}
+
+/* Link */
+a {
+    color: #00ff9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>URL shortener Project</h1>
+        <form action="/short" method="post">
+            <label for="longUrl">Enter long URL:</label>
+            <input type="text" id="longUrl" name="longUrl" required>
+            <button type="submit">shortener</button>
+        </form>
+
+        <!-- ejs template engine hota hae jiske through dynamic js dika skte hae  -->
+        <% if(shortUrl) { %>
+            <p>Short URL :- <a href="<%=shortUrl %>" target="_blank" />
+            <%= shortUrl %>
+            </p> <% } %>
+
+    </div>
+     
+</body>
+</html>
