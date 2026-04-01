@@ -24,8 +24,12 @@ app.get("/:shortCode",getOriginalUrl);
     
 
 
-const port=1000;
-app.listen(port,()=>{
-    console.log(`server is running on port ${port}`);
-    
-})
+const port = process.env.PORT || 1000;
+
+app.listen(port, () => {
+  console.log(`server is running on port ${port}`);
+});
+
+
+
+//live link of this project:-https://url-shorter-web-app-production.up.railway.app/
