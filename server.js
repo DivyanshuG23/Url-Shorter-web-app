@@ -10,9 +10,10 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 mongoose.connect("mongodb+srv://divyanshugangwar663_db_user:zTiU9qkozkuyrvfb@cluster0.qhdsiac.mongodb.net/",
-// {
-//     dbName:"node1_master"
-// } 
+    
+ {
+     dbName:"Url_shorter"
+ } 
 )
 .then(()=>
     console.log("mangodb connected..!")).catch((err)=>console.log(err));
