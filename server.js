@@ -10,10 +10,10 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 mongoose
-    .connect("mongodb+srv://divyanshugangwar663_db_user:6YHDKPcFi83MIR0x@cluster0.j9riwxt.mongodb.net/",
+    .connect("mongodb+srv://divyanshugangwar663_db_user:zTiU9qkozkuyrvfb@cluster0.qhdsiac.mongodb.net/",
 {
     dbName:"node1_master"
-}
+} 
 )
 .then(()=>
     console.log("mangodb connected..!")).catch((err)=>console.log(err));
@@ -39,5 +39,4 @@ app.listen(port, () => {
 });
 
 
-
-//live link of this project:-https://url-shorter-web-app-production.up.railway.app/
+// zTiU9qkozkuyrvfb
