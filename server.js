@@ -1,12 +1,16 @@
 import express from "express";
 import mongoose from "mongoose";
 import {shortUrl,getOriginalUrl} from "./Controllers/url.js";
+import dns from 'dns';
+//change dns
+dns.setServers(['1.1.1.1', '8.8.8.8']);
 const app=express();
 app.use(express.urlencoded({extended:true}));
 app.set("views", "./views");
 app.set("view engine", "ejs");
+
 mongoose
-    .connect("mongodb://divyanshugangwar663_db_user:6YHDKPcFi83MIR0x@ac-zrffpz9-shard-00-00.j9riwxt.mongodb.net:27017,ac-zrffpz9-shard-00-01.j9riwxt.mongodb.net:27017,ac-zrffpz9-shard-00-02.j9riwxt.mongodb.net:27017/?ssl=true&replicaSet=atlas-w63j91-shard-0&authSource=admin&appName=Cluster0",
+    .connect("mongodb+srv://divyanshugangwar663_db_user:6YHDKPcFi83MIR0x@cluster0.j9riwxt.mongodb.net/",
 {
     dbName:"node1_master"
 }
