@@ -21,7 +21,8 @@ app.get('/',(req,res)=>{
 app.post('/short', shortUrl) 
 
 //redirect to original url using short code :- dynamic routing
-app.get("/:shortCode",getOriginalUrl);
+// app.get("/:shortCode",getOriginalUrl);
+app.get("/url/:shortCode", getOriginalUrl);
     
 
 

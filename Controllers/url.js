@@ -6,7 +6,8 @@ export const shortUrl = async (req, res) => {
 
   const shortCode = shortid.generate();
 
-  const shortUrl = `${req.protocol}://${req.get("host")}/${shortCode}`;
+//   const shortUrl = `${req.protocol}://${req.get("host")}/${shortCode}`;
+const shortUrl = `${req.protocol}://${req.get("host")}/url/${shortCode}`;
 
   const newUrl = new Url({ shortCode, longUrl });
   await newUrl.save();
